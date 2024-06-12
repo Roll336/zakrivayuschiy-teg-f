@@ -6,6 +6,8 @@
     --text-weight: 400;
     --bg-color: #fff;
     --main-color: #000;
+    --change-text-color: #fff;
+    --fill-heart: red;
     --bg-gradient: 
       repeating-linear-gradient(-90deg, #d3d3d3, transparent 4px),
       repeating-linear-gradient(#d3d3d3, transparent 4px),
