@@ -18,10 +18,9 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font), sans-serif;
-  font-variation-settings: 'wght' var(--text-weight);
+  font-variation-settings: "wght" var(--text-weight);
   color: var(--main-color);
   background-image: var(--bg-gradient);
-  background-position: center;
   background-size: cover;
   background-color: #fff;
 }
@@ -35,7 +34,7 @@
   inline-size: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
   block-size: clamp(20.438rem, 3.85vw + 19.535rem, 23rem);
   margin: 100px auto;
-  font-family: 'PressStart2p';
+  font-family: "PressStart2p";
   text-transform: uppercase;
   line-height: 1;
 }
@@ -56,18 +55,17 @@
   position: relative;
   padding-inline-start: 20px;
   transition: 0.3s;
-  margin-block: 4px ;
+  margin-block: 4px;
   display: block;
 }
 
-
-
 .theme-menu__item:hover {
   opacity: 0.6;
+  cursor: pointer;
 }
 
 .theme-menu__item:not(:last-child) {
- margin-block-end: 12px;
+  margin-block-end: 12px;
 }
 
 .theme-menu__item:has([disabled]) {
@@ -79,16 +77,7 @@
   content: "▶";
   position: absolute;
   left: 7px;
-  animation: pulse 0.5s ease-in-out alternate infinite ;
-}
-
-@keyframes pulse {
-  from {
-    left: 7px;
-  }
-  to {
-    left: 3px;
-  }
+  animation: pulse 0.5s ease-in-out alternate infinite;
 }
 
 .theme-menu__button {
@@ -97,7 +86,6 @@
   border: none;
   background-color: transparent;
   text-transform: uppercase;
-  
 }
 
 .theme-menu__button:focus {
@@ -141,9 +129,8 @@
 .card__title {
   font-size: 18px;
   line-height: 121%;
-  font-variation-settings: 'wght' var(--title-weight);
+  font-variation-settings: "wght" var(--title-weight);
   padding: 5px 10px;
-  
 }
 
 .image-container {
@@ -154,17 +141,20 @@
   position: absolute;
   top: 28px;
   right: clamp(0.813rem, 1.127vw + 0.548rem, 1.563rem);
-  font-family: 'PressStart2P', monospace;
+  font-family: "PressStart2P", monospace;
   font-size: 14px;
   line-height: 1;
   text-transform: uppercase;
   color: var(--main-color);
   mix-blend-mode: hard-light;
-  text-shadow: -1px 0 var(--bg-color), 0 1px var(--bg-color), 1px 0 var(--bg-color), 0 -1px var(--bg-color);
+  text-shadow: -1px 0 var(--bg-color), 0 1px var(--bg-color),
+    1px 0 var(--bg-color), 0 -1px var(--bg-color);
   opacity: 50%;
 }
 
-@supports((text-stroke: 1px var(bg-color)) or (-webkit-text-stroke: 1px var(bg-color))) {
+@supports (
+  (text-stroke: 1px var(bg-color)) or (-webkit-text-stroke: 1px var(bg-color))
+) {
   .image-label {
     -webkit-text-stroke: 1px var(--bg-color);
     text-stroke: 1px var(--bg-color);
@@ -177,10 +167,38 @@
   block-size: 100%;
 }
 
+.image-invert {
+  filter: invert(0.7);
+}
+
+.image-saturate {
+  filter: saturate(181%);
+}
+
+.image-sepia {
+  filter: sepia(70%);
+}
+
+.image-hue-rotate {
+  filter: hue-rotate(180deg);
+}
+
+.image-contrast {
+  filter: contrast(50%);
+}
+
+.image-blur {
+  filter: blur(2rem);
+}
+
+.image-multy {
+  filter: grayscale(1) opacity(0.5);
+}
+
 .card__text {
   font-size: 18px;
   line-height: 116%;
-  font-variation-settings: 'wght' var(--text-weight);
+  font-variation-settings: "wght" var(--text-weight);
   padding: 0 25px;
 }
 
@@ -196,6 +214,10 @@
   background-color: transparent;
   transition: 0.3s ease;
   padding: 0;
+}
+
+.card__icon-button:hover {
+  cursor: pointer;
 }
 
 .card__icon-button:focus {
@@ -215,7 +237,10 @@
   padding: 10px 0;
   background-color: transparent;
   transition: 0.3s;
- 
+}
+
+.card__like-button:hover {
+  cursor: pointer;
 }
 
 .card__like-button::before {
@@ -233,33 +258,25 @@
 
 .card__like-button:hover::before {
   transform: scaleX(1);
-  }
+}
 
-.footer-button:focus,.card__like-button:focus {
+.footer-button:focus,
+.card__like-button:focus {
   outline: none;
   box-shadow: 2px 2px var(--main-color);
-  
 }
 
 .like-icon {
   margin-block-start: 3px;
-  padding: 0 ;
+  padding: 0;
   inline-size: 37px;
   block-size: 34px;
-}
-
-
-
-.like-button-text {
- 
-  
-  
 }
 
 .button__text {
   position: relative;
   z-index: 2;
-  font-family: 'PressStart2P', monospace;
+  font-family: "PressStart2P", monospace;
   font-size: 14px;
   line-height: 0.9;
   mix-blend-mode: difference;
@@ -269,19 +286,19 @@
 .save-window {
   background-color: var(--bg-color);
   color: var(--main-color);
-  font-family: 'PressStart2P', monospace;
-  inline-size: clamp(21.313rem, 1.502vw + 20.96rem, 22.313rem);
-  padding: 30px
+  font-family: "PressStart2P", monospace;
+  inline-size: clamp(21.313rem, 1.127vw + 21.048rem, 22.063rem);
+  padding: 30px;
 }
 
 .save-window[open] {
-display: flex;
-flex-direction: column;
-gap: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .save-window[open]::backdrop {
- background-color: rgba(0, 0, 0, 75%)
+  background-color: rgba(0, 0, 0, 75%);
 }
 
 .save-window__text-container {
@@ -292,12 +309,11 @@ gap: 30px;
 .save-window .image-floppy {
   inline-size: 39px;
   aspect-ratio: 1;
- /* margin-inline-end: 20px;*/
+  /* margin-inline-end: 20px;*/
 }
 
-
 .save-window-text {
-  inline-size: 234px;
+  inline-size: min-content;
   font-size: 14px;
   line-height: 1.5;
   text-transform: uppercase;
@@ -308,12 +324,12 @@ gap: 30px;
   text-transform: uppercase;
   background-color: transparent;
   border: 2px solid var(--main-color);
-  padding-block: 12px;
+  padding-block: 11px;
 }
 
-
-
-
+.save-window-button:hover {
+  cursor: pointer;
+}
 
 .footer {
   inline-size: 100%;
@@ -321,22 +337,22 @@ gap: 30px;
   margin: 50px 0 105px;
 }
 
-
-
 .footer-button {
   position: relative;
   display: block;
   background-color: var(--bg-color);
-  /*inline-size: clamp(19.125rem, 2.723vw + 18.487rem, 20.938rem);*/
-  /*inline-size: clamp(19.125rem, 3.099vw + 18.399rem, 21.188rem);*/
-  /*inline-size: 40%;*/
   line-height: 1;
   margin: 0 auto;
   border: 2px solid currentColor;
   padding: 15px 18px;
   transition: box-shadow 0.3s;
-  
- /* padding: 15px 20px; */
+  block-size: min-content;
+
+  /* padding: 15px 20px; */
+}
+
+.footer-button:hover {
+  cursor: pointer;
 }
 
 .footer-button::before {
@@ -350,19 +366,10 @@ gap: 30px;
   transform-origin: left;
   transition: 0.5s ease-in-out;
   transform: scaleX(0);
-  }
-  
-  .footer-button:hover::before {
-    transform: scaleX(1);
-  }
+}
 
-.footer-button-text {
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 8px;
-
-
+.footer-button:hover::before {
+  transform: scaleX(1);
 }
 
 .image-floppy {
@@ -370,8 +377,13 @@ gap: 8px;
   inline-size: 21px;
   color: var(--change-text-color);
   aspect-ratio: 1;
-  
-  
-/*width: 28px;
-height: 28px;*/
 }
+
+.footer-button-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  block-size: min-content;
+}
+

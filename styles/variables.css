@@ -14,3 +14,23 @@
       linear-gradient(#e7e7e7 0.01%, #1a1a1a);
 
 }
+
+
+@media (width <= 375px) {
+  .save-window {
+    padding: 30px 42px;
+  }
+
+  .save-window__text-container {
+    gap: 17px;
+}
+  .footer-button-text {
+    flex-direction: column;
+  }
+
+  .image-floppy {
+    inline-size: 28px;
+    aspect-ratio: 1;
+   
+  }
+}
