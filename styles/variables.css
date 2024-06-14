@@ -1,7 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-    --main-font: 'Inter-Variable';
-    --accent-font: 'PressStart2P';
+    --main-font: 'Inter-Variable', sans-serif;
+    --accent-font: 'PressStart2P', monospace;
     --title-weight: 700;
     --text-weight: 400;
     --bg-color: #fff;
@@ -16,21 +16,4 @@
 }
 
 
-@media (width <= 375px) {
-  .save-window {
-    padding: 30px 42px;
-  }
 
-  .save-window__text-container {
-    gap: 17px;
-}
-  .footer-button-text {
-    flex-direction: column;
-  }
-
-  .image-floppy {
-    inline-size: 28px;
-    aspect-ratio: 1;
-   
-  }
-}
