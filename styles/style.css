@@ -296,9 +296,7 @@
 .save-button {
   line-height: 1;
   margin: 50px auto 195px;
-
   padding: 15px 18px;
-
   block-size: min-content;
 }
 
@@ -356,7 +354,6 @@
   text-transform: uppercase;
   padding-block: 11px;
 }
-
 
 .save-window-button:hover {
   cursor: pointer;
