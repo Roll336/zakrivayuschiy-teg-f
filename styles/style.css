@@ -283,7 +283,7 @@
   block-size: 34px;
 }
 
-.transform-button__text {
+.button__text {
   position: relative;
   z-index: 2;
   font-family: var(--accent-font);
