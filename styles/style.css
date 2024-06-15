@@ -352,13 +352,11 @@
   text-transform: uppercase;
 }
 
-.save-window-button {
-  line-height: 0.9;
+.save-window .transform-button {
   text-transform: uppercase;
-  background-color: transparent;
-  border: 2px solid var(--main-color);
   padding-block: 11px;
 }
+
 
 .save-window-button:hover {
   cursor: pointer;
