@@ -109,7 +109,9 @@
 }
 
 .content {
+  inline-size: min-content;
   block-size: min-content;
+  margin: 0 auto;
 }
 
 .card__list {
