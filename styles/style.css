@@ -238,11 +238,10 @@
 .card__like-button {
   inline-size: 130px;
   block-size: 100%;
-
   padding: 10px 0;
 }
 
-.transform-button {
+.button {
   position: relative;
   display: block;
   background-color: var(--bg-color);
@@ -250,11 +249,11 @@
   transition: box-shadow 0.3s;
 }
 
-.transform-button:hover {
+.button:hover {
   cursor: pointer;
 }
 
-.transform-button::before {
+.button::before {
   content: "";
   position: absolute;
   display: block;
@@ -267,11 +266,11 @@
   transform: scaleX(0);
 }
 
-.transform-button:hover::before {
+.button:hover::before {
   transform: scaleX(1);
 }
 
-.transform-button:focus {
+.button:focus {
   outline: none;
   box-shadow: 2px 2px var(--main-color);
 }
@@ -350,13 +349,9 @@
   text-transform: uppercase;
 }
 
-.save-window .transform-button {
+.save-window .button {
   text-transform: uppercase;
   padding-block: 11px;
-}
-
-.save-window-button:hover {
-  cursor: pointer;
 }
 
 @media (width <= 375px) {
